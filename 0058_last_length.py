@@ -6,11 +6,7 @@ class Solution(object):
         """
         if s == "":
             return 0
-        split_list = s.split(' ')
-        i = 1
-        while len(split_list[-i]) == 0:
-            i += 1
-        return len(split_list[-i])
+        return len(s.strip().split(' ')[-1])
 
 
 length = Solution()

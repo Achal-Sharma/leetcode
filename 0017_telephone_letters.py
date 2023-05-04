@@ -35,4 +35,4 @@ class Solution(object):
 
 
 sol = Solution()
-print(sol.letter_combinations(""))
+print(sol.letter_combinations("23"))

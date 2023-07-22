@@ -3,24 +3,17 @@ import itertools
 
 class Solution(object):
     def get_letters_list(self, digits):
-        letters_list = []
-        for x in digits:
-            if x == "2":
-                letters_list.append(["a", "b", "c"])
-            elif x == "3":
-                letters_list.append(["d", "e", "f"])
-            elif x == "4":
-                letters_list.append(["g", "h", "i"])
-            elif x == "5":
-                letters_list.append(["j", "k", "l"])
-            elif x == "6":
-                letters_list.append(["m", "n", "o"])
-            elif x == "7":
-                letters_list.append(["p", "q", "r", "s"])
-            elif x == "8":
-                letters_list.append(["t", "u", "v"])
-            elif x == "9":
-                letters_list.append(["w", "x", "y", "z"])
+        corresponding_telephone_letters = {
+            "2": ["a", "b", "c"],
+            "3": ["d", "e", "f"],
+            "4": ["g", "h", "i"],
+            "5": ["j", "k", "l"],
+            "6": ["m", "n", "o"],
+            "7": ["p", "q", "r", "s"],
+            "8": ["t", "u", "v"],
+            "9": ["w", "x", "y", "z"]
+        }
+        letters_list = [corresponding_telephone_letters[x] for x in digits if x in corresponding_telephone_letters]
         return letters_list
 
     def letter_combinations(self, digits):
